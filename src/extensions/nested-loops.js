@@ -20,11 +20,11 @@ for (let i = 1; i <= 10; i++) {
 //    eg [[1],[2,2],...]
 
 for (let i = 1; i < 11; i++) {
-  let innerOne = []
+  const innerOne = []
   for (let j = i; j < i * 2; j++) {
     innerOne.push(i)
   }
-  nestedOne.push(innerOne);
+  nestedOne.push(innerOne)
 }
 
 console.log(nestedOne)
