@@ -27,19 +27,63 @@ for (let i = 1; i < 11; i++) {
   nestedOne.push(innerOne)
 }
 
-console.log(nestedOne)
-
 // 3. As 2, but each array should contain the values from the outer 'loop index' to 1 inclusive. Update array 'nestedTwo'
 //    eg [[1],[2,1],...]
+
+for (let i = 1; i < 11; i++) {
+  const innerTwo = []
+  for (let j = i; j > 0; j--) {
+    innerTwo.push(j)
+  }
+  nestedTwo.push(innerTwo)
+}
 
 // 4. As 2, but each array should contain arrays from 1 to the outer 'loop index' with the value of the outer 'loop index'. Update array 'deepOne'
 //    eg [[[1]],[[2],[2,2]],...]
 
+for (let i = 1; i < 11; i++) {
+  const middleOne = []
+  for (let j = 0; j < i; j++) {
+    const innerOne = []
+    for (let k = -1; k < j; k++) {
+      innerOne.push(i)
+    }
+    middleOne.push(innerOne)
+  }
+  deepOne.push(middleOne)
+}
+
 // 5. As 4, update array 'deepTwo' so that the result is:
 //       [[[1]],[[1],[1,2]],...]
 
+for (let i = 1; i < 11; i++) {
+  const middleOne = []
+  for (let j = 0; j < i; j++) {
+    const innerOne = []
+    for (let k = 1; k < j + 2; k++) {
+      innerOne.push(k)
+    }
+    middleOne.push(innerOne)
+  }
+  deepTwo.push(middleOne)
+}
+
 // 6. As 5, update the array 'deepThree', but the result should be the average of the sum of the squares of the numbers in each array
 //       [[1],[[1],[2.5]],...]
+
+for (let i = 1; i < 11; i++) {
+  const middleOne = []
+  for (let j = 0; j < i; j++) {
+    const innerOne = []
+    for (let k = 1; k < j + 2; k++) {
+      innerOne.push((i + j) / k)
+    }
+    middleOne.push(innerOne)
+  }
+  deepThree.push(middleOne)
+}
+
+console.log(deepThree)
 
 module.exports = {
   START,
