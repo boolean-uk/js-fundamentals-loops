@@ -21,32 +21,72 @@ for (let i = 1; i < 11; i++) {
 //    eg [[1],[2,2],...]
 
 for (let i = 1; i <= 10; i++) {
-  const q2nest = []
+  const arr = []
   for (let j = 0; i > j; j++) {
-    q2nest.push(i)
+    arr.push(i)
   }
-  nestedOne.push(q2nest)
+  nestedOne.push(arr)
 }
 
 // 3. As 2, but each array should contain the values from the outer 'loop index' to 1 inclusive. Update array 'nestedTwo'
 //    eg [[1],[2,1],...]
 for (let i = 1; i <= 10; i++) {
   const q3nest = []
-  for (let j = 0; i > j; j++) {
-    q3nest.push(i)
+  for (let j = i; j > 0; j--) {
+    q3nest.push(j)
   }
   nestedTwo.push(q3nest)
 }
-console.log(nestedTwo)
 
+// console.log(nestedTwo)
 // 4. As 2, but each array should contain arrays from 1 to the outer 'loop index' with the value of the outer 'loop index'. Update array 'deepOne'
 //    eg [[[1]],[[2],[2,2]],...]
+for (let i = 1; i <= 10; i++) {
+  const deepArr1 = []
+  for (let j = 0; i > j; j++) {
+    const deepArr2 = []
+    for (let k = -1; j > k; k++) {
+      deepArr2.push(i)
+    }
+    deepArr1.push(deepArr2)
+  }
+  deepOne.push(deepArr1)
+}
 
 // 5. As 4, update array 'deepTwo' so that the result is:
 //       [[[1]],[[1],[1,2]],...]
+for (let i = 1; i <= 10; i++) {
+  const deepArr1 = []
+  for (let j = 0; i > j; j++) {
+    const deepArr2 = []
+    for (let k = 1; j + 2 > k; k++) {
+      deepArr2.push(k)
+    }
+    deepArr1.push(deepArr2)
+  }
+  deepTwo.push(deepArr1)
+}
 
 // 6. As 5, update the array 'deepThree', but the result should be the average of the sum of the squares of the numbers in each array
 //       [[1],[[1],[2.5]],...]
+for (let i = 1; i <= 10; i++) {
+  const deepArr1 = []
+  for (let j = 0; i > j; j++) {
+    const deepArr2 = []
+    for (let k = 1; j + 2 > k; k++) {
+      deepArr2.push(k)
+    }
+    let result = 0
+    for (let m = 0; m < deepArr2.length; m++) {
+      result += deepArr2[m] ** 2
+    }
+    result /= deepArr2.length
+    deepArr1.push([result])
+  }
+  deepThree.push(deepArr1)
+}
+
+console.log(deepThree)
 
 module.exports = {
   START,
