@@ -17,7 +17,7 @@ describe('For Loops and Arrays:', () => {
     expect(d).toEqual([3, 5, 6, 1])
   })
 
-  it('numsReversed should be 10,1,4,6,1,5,12,3,1', () => {
+  fit('numsReversed should be 10,1,4,6,1,5,12,3,1', () => {
     expect(e).toEqual([10, 1, 4, 6, 1, 5, 12, 3, 1])
   })
 })
