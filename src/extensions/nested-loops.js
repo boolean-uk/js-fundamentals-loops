@@ -103,7 +103,6 @@ for (let first = 1; first <= 10; first++) {
 }
 console.log(deepThree)
 
-
 // for (let i = 1; i <= 10; i++) {
 //   const arrayOne = []
 //   for (let j = 0; i > j; j++) {
@@ -121,7 +120,6 @@ console.log(deepThree)
 //   deepThree.push(arrayOne)
 // }
 // console.log(deepThree)
-
 
 module.exports = {
   START,
