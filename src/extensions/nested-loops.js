@@ -105,24 +105,15 @@ console.log('Exercise 6')
 
 for (let i = 1; i <= END; i++) {
   const nestArray1 = []
-  for (let j = 1; j <= i; j++) {
+  for (let j = 0; j < i; j++) {
     const nestArray2 = []
-    for (let k = 1; k <= j; k++) {
-      const nestArray3 = []
-      let sumOfSq = 0
-      let avg = 0
-      avg = sumOfSq / k
-      for (let l = 1; l <= k; l++) {
-        sumOfSq += k ** 2
-        // console.log(sumOfSq)
-      }
-      nestArray3.push(avg)
-
-      //  console.log(nestArray3)
-
-      nestArray2.push(nestArray3)
+    let sum = 0
+    for (let k = j; k < i; k++) {
+      sum += (i - k) ** 2
     }
-    nestArray1.push(nestArray2)
+    const average = sum / (i - j)
+    nestArray2.push(average)
+    nestArray1.unshift(nestArray2)
   }
   deepThree.push(nestArray1)
 }
