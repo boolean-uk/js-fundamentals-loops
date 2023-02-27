@@ -8,16 +8,15 @@ let word = ''
 // TODO: Add code below this line to make the tests pass
 
 // 1. Use a for loop to set the sum variable to the sum of all the values in nums
-sum = 0
+
 for (let i = 0; i < nums.length; i++) {
   sum += nums[i]
 }
-console.log(sum)
+
 // 2. Use a for loop to populate doubledNums with every value from nums array doubled (i.e [2, 6, 24, etc...])
 const doubledNums = []
 for (let i = 0; i <= nums.length - 1; i++) {
   doubledNums.push(nums[i] * 2)
-  console.log(doubledNums)
 }
 
 // 3. Use a for loop to set word equal to all the letters in the letters array
