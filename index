@@ -1,0 +1,7 @@
+function shout(word, exclamations) {
+  for (let i = 0; i < exclamations; i++) {
+    return word
+  }
+}
+console.log(shout('hello', 3))
+console.log(shout('bye', 10))
