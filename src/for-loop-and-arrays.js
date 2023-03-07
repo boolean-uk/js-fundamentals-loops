@@ -20,7 +20,7 @@ doubledNums.push(nums[i] * 2)
 
 console.log("Double it", doubledNums)
 // 3. Use a for loop to set word equal to all the letters in the letters array
-
+thank you for that Carolina
 
 // 4. Use a for loop to populate everySecondNum with every second number from the nums array
 const everySecondNum = []
