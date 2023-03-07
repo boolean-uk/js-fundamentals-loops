@@ -26,22 +26,58 @@ console.log('1.', simpleOne)
 
 for (let i = 1; i <= 10; i++) {
   const newArray = []
-  for (let j = 0; j <= i; j++) {
-    // nestedOne.push([i])
+  for (let j = 1; j <= i; j++) {
     newArray.push(i)
   }
   nestedOne.push(newArray)
 }
 
-console.log(nestedOne)
+console.log(`2 - `, nestedOne)
 // 3. As 2, but each array should contain the values from the outer 'loop index' to 1 inclusive. Update array 'nestedTwo'
 //    eg [[1],[2,1],...]
+
+for (let i = 1; i <= 10; i++) {
+  const newArray = []
+  for (let j = 1; j <= i; j++) {
+    newArray.unshift(j)
+  }
+  nestedTwo.push(newArray)
+}
+console.log(nestedTwo)
 
 // 4. As 2, but each array should contain arrays from 1 to the outer 'loop index' with the value of the outer 'loop index'. Update array 'deepOne'
 //    eg [[[1]],[[2],[2,2]],...]
 
+for (let i = 1; i <= 10; i++) {
+  const newArray = []
+  for (let j = 1; j <= i; j++) {
+    const forArray = []
+    for (let k = 1; k <= j; k++) {
+      forArray.push(i)
+    }
+    newArray.push(forArray)
+  }
+  deepOne.push(newArray)
+}
+
+console.log(deepOne)
+
 // 5. As 4, update array 'deepTwo' so that the result is:
 //       [[[1]],[[1],[1,2]],...]
+
+for (let i = 1; i <= 10; i++) {
+  const newArray = []
+  for (let j = 1; j <= i; j++) {
+    const forArray = []
+    for (let k = 1; k <= j; k++) {
+      forArray.push(k)
+    }
+    newArray.push(forArray)
+  }
+  deepTwo.push(newArray)
+}
+
+console.log(`5 - `, deepTwo)
 
 // 6. As 5, update the array 'deepThree', but the result should be the average of the sum of the squares of the numbers in each array
 //       [[1],[[1],[2.5]],...]
