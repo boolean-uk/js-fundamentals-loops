@@ -21,7 +21,7 @@ for (let i = START; i <= END; i++) {
 }
 
 // 2. Using nested for loops, add arrays to 'nestedOne' where each array has n copies of the outer 'loop index'
-//    eg [[1],[2,2],...]
+// eg [[1],[2,2],...]
 
 for (let i = START; i <= END; i++) {
   const arr1 = []
