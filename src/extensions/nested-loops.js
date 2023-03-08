@@ -82,6 +82,24 @@ console.log(`5 - `, deepTwo)
 // 6. As 5, update the array 'deepThree', but the result should be the average of the sum of the squares of the numbers in each array
 //       [[1],[[1],[2.5]],...]
 
+for (let i = 1; i <= END; i++) {
+  const outerArray = []
+  for (let j = 1; j <= i; j++) {
+    const innerArray = []
+    let sum = 0
+    let average = 0
+    for (let k = 1; k <= j; k++) {
+      sum += k ** 2
+      average = sum / k
+    }
+    innerArray.push(average)
+    outerArray.push(innerArray)
+  }
+  deepThree.push(outerArray)
+}
+
+console.log(`6 - `, deepThree)
+
 module.exports = {
   START,
   END,

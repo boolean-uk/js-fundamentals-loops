@@ -1,8 +1,9 @@
-const numsZeroToThree = []
 const numsFiveToTen = []
 const evenNums = []
 const countdown = []
+const numsZeroToThree = []
 let i
+
 // TODO: 1. Write a for loop that adds the numbers 0 to 3 to the numsZeroToThree array
 for (i = 0; i <= 3; i++) {
   numsZeroToThree.push(i)
