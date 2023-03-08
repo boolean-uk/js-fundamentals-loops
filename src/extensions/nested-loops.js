@@ -32,7 +32,7 @@ console.log('answer to 2: ', nestedOne)
 //    eg [[1],[2,1],...]
 for (let i = 1; i < 11; i++) {
   const innerArray = []
-  for (let j = 1; j < i; j++){
+  for (let j = 1; j <= i; j++){
     innerArray.unshift(j)
   }
 nestedTwo.push(innerArray)
@@ -45,22 +45,50 @@ for (let i = 1; i < 11; i++) {
   const innerArray = []
   for (let j = 0; j < i; j++){
     const innerArray2 = []
-    for (let k = 0; k < j; k++){
+    for (let k = 0; k <= j; k++){
       innerArray2.push(i)
     }
   innerArray.push(innerArray2)
   }
 deepOne.push(innerArray)
 }
-console.log('answer to 4: ', deepOne) 
-// FAILED!!
+console.log('answer to 4: ', deepOne)
 
 // 5. As 4, update array 'deepTwo' so that the result is:
 //       [[[1]],[[1],[1,2]],...]
+for (let i = 1; i < 11; i++) {
+  const innerArray = []
+  for (let j = 1; j <= i; j++){
+    const innerArray2 = []
+    for (let k = 1; k <= j; k++){
+      innerArray2.push(k)
+    }
+  innerArray.push(innerArray2)
+  }
+deepTwo.push(innerArray)
+}
+
+console.log('answer to 5: ', deepTwo)
 
 // 6. As 5, update the array 'deepThree', but the result should be the average of the sum of the squares of the numbers in each array
 //       [[1],[[1],[2.5]],...]
-
+for (let i = 1; i < 11; i++) {
+  const innerArray = []
+  for (let j = 1; j <= i; j++){
+    const innerArray2 = []
+    let squareSum = 0
+    let average = 0
+    for (let k = 1; k <= j; k++){
+      squareSum += k * k
+      average = squareSum / k
+    }
+  innerArray2.push(average)
+  innerArray.push(innerArray2)
+  }
+deepThree.push(innerArray)
+}
+ 
+console.log('answer for 6: ', deepThree)
 module.exports = {
   START,
   END,
