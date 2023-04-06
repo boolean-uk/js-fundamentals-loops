@@ -39,7 +39,7 @@ const numsReversed = []
 for (let i = nums.length - 1; i >= 0; i--) {
   numsReversed.push(nums[i])
 }
-console.log(numsReversed)
+// console.log(numsReversed)
 
 // do not change below this line
 module.exports = {
