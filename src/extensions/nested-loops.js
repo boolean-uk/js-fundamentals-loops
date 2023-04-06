@@ -58,7 +58,7 @@ for (let i = 0; i < 10; i++) {
   for (let j = 0; j <= i; j++) {
     const innerArray2 = []
     for (let k = 0; k <= j; k++) {
-      innerArray2.push(k + 1)
+      innerArray2.push(k + 1) // k starts from 0 and ends in j.
     }
     innerArray1.push(innerArray2)
   }
@@ -70,13 +70,16 @@ for (let i = 0; i < 10; i++) {
   const innerArray1 = []
   for (let j = 0; j <= i; j++) {
     const innerArray2 = []
+    let sumOfSquares = 0
     for (let k = 0; k <= j; k++) {
-      innerArray2.push(i + 1)
+      sumOfSquares += (k + 1) ** 2
     }
+    innerArray2.push(sumOfSquares / (j + 1))
     innerArray1.push(innerArray2)
   }
   deepThree.push(innerArray1)
 }
+
 module.exports = {
   START,
   END,
