@@ -13,7 +13,7 @@ for (let i=0; i < nums.length; i++) {
 // 2. Use a for loop to populate doubledNums with every value from nums array doubled (i.e [2, 6, 24, etc...])
 const doubledNums = []
 for (let i=0; i < nums.length; i++) {
-  doubledNums[i] = nums[i] * 2
+  doubledNums.push(nums[i] * 2)
 }
 
 // 3. Use a for loop to set word equal to all the letters in the letters array
@@ -22,16 +22,15 @@ for (let i=0; i < letters.length; i++) {
 }
 
 // 4. Use a for loop to populate everySecondNum with every second number from the nums array
+
 const everySecondNum = []
-let count = 1
-for (let i=0; i < nums.length/2 - 1; i++) {
-  everySecondNum[i] = nums[count]
-  count += 2
+for (let i=1; i < nums.length; i+=2) {
+  everySecondNum.push(nums[i]) 
 }
 // 5. Use a for loop to populate numsReversed with the numbers from nums in reverse order
 const numsReversed = []
 for (let i=0; i < nums.length; i++) {
-  numsReversed[i] = nums[nums.length -1 - i]
+  numsReversed.unshift(nums[i])
 }
 
 // do not change below this line
