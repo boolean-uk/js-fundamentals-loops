@@ -78,17 +78,11 @@ for (let i=START; i <= END; i++ ) {
 
 for (let i=START; i <= END; i++ ) {
   let array = []
-  let nested = []
-  let sum = 0
+  let sum = 0;
   for (let j=START; j <= i; j++ ) {
-    sum += j*j
-    let avg = []
-    avg.push(sum / j)
-    nested.push(avg.slice(0)) 
-    array.push(nested.slice(0))
-    //console.log("Average:", avg)  
+    sum += j*j      
+    array.push([sum/j])      
   }
-  
   deepThree.push(array)
 }
 
