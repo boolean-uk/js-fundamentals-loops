@@ -187,7 +187,7 @@ describe('Nested loops', () => {
     expect(answers.deepOne).toEqual(a4)
   })
 
-  it('Deep array 2.', () => {
+  fit('Deep array 2.', () => {
     expect(answers.deepTwo).toEqual(a5)
   })
 
