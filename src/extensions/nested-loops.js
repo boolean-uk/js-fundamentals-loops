@@ -85,10 +85,36 @@ for (let i = 1; i <= 10; i++) {
   deepTwo.push(ar)
 }
 
-console.log(deepTwo)
-
 // 6. As 5, update the array 'deepThree', but the result should be the average of the sum of the squares of the numbers in each array
 //       [[1],[[1],[2.5]],...]
+
+for (let i = 1; i <= 10; i++) {
+  // eslint-disable-next-line prefer-const
+  let ar = []
+  for (let j = i; j >= 1; j--) {
+    // eslint-disable-next-line prefer-const
+    let innerAr = []
+    let sum = 0
+    let sum2 = 0
+    for (let k = j; k <= i; k++) {
+      innerAr.push(i - k + 1)
+      sum2 += (i - k + 1) ** 2
+    }
+    // console.log(i - j + 1)
+    // console.log(innerAr.length)
+    for (let a = 0; a < innerAr.length; a++) {
+      sum += innerAr[a] ** 2
+    }
+
+    console.log(sum2)
+    console.log(sum)
+
+    // ar.push([sum / innerAr.length])
+    ar.push([sum2 / (i - j + 1)])
+  }
+
+  deepThree.push(ar)
+}
 
 module.exports = {
   START,
