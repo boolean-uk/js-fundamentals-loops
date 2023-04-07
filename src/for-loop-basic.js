@@ -23,7 +23,7 @@ for (let b = 0; b <= 6; b += 2) {
 for (let c = 3; c >= 0; c--) {
   countdown.push(c)
 }
-console.log(countdown)
+// console.log(countdown)
 // do not change below this line
 module.exports = {
   a: numsZeroToThree,
