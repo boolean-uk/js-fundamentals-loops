@@ -17,6 +17,11 @@ const deepThree = []
 // Your code here
 // }
 
+for (let a = 1; a <= 10; a++) {
+  simpleOne.push(a)
+}
+console.log(simpleOne)
+
 // 2. Using nested for loops, add arrays to 'nestedOne' where each array has n copies of the outer 'loop index'
 //    eg [[1],[2,2],...]
 
