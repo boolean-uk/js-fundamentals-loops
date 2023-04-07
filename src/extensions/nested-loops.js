@@ -17,7 +17,7 @@ const deepThree = []
 // Your code here
 // }
 
-for (let a = 1; a <= 10; a++) {
+for (let a = START; a <= END; a++) {
   simpleOne.push(a)
 }
 // console.log(simpleOne)
@@ -28,7 +28,7 @@ for (let a = 1; a <= 10; a++) {
 for (let b = 0; b < simpleOne.length; b++) {
   const innerArray = []
   for (let c = 0; c <= b; c++) {
-    innerArray.push(b + 1)
+    console.log(innerArray.push(b + 1))
   }
   nestedOne.push(innerArray)
 }
@@ -37,6 +37,8 @@ for (let b = 0; b < simpleOne.length; b++) {
 
 // 3. As 2, but each array should contain the values from the outer 'loop index' to 1 inclusive. Update array 'nestedTwo'
 //    eg [[1],[2,1],...]
+
+
 
 // 4. As 2, but each array should contain arrays from 1 to the outer 'loop index' with the value of the outer 'loop index'. Update array 'deepOne'
 //    eg [[[1]],[[2],[2,2]],...]
