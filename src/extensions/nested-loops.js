@@ -49,8 +49,6 @@ for (let b = 0; b < simpleOne.length; b++) {
 // 4. As 2, but each array should contain arrays from 1 to the outer 'loop index' with the value of the outer 'loop index'. Update array 'deepOne'
 //    eg [[[1]],[[2],[2,2]],...]
 
-
-
 // 5. As 4, update array 'deepTwo' so that the result is:
 //       [[[1]],[[1],[1,2]],...]
 
