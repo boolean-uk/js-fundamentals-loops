@@ -33,7 +33,7 @@ for (let b = 0; b < simpleOne.length; b++) {
   nestedOne.push(innerArray)
 }
 
-// console.log(nestedOne)
+console.log(nestedOne)
 
 // 3. As 2, but each array should contain the values from the outer 'loop index' to 1 inclusive. Update array 'nestedTwo'
 //    eg [[1],[2,1],...]
