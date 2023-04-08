@@ -48,6 +48,18 @@ for (let d = START; d < END + 1; d++) {
 // console.log(nestedTwo)
 // 4. As 2, but each array should contain arrays from 1 to the outer 'loop index' with the value of the outer 'loop index'. Update array 'deepOne'
 //    eg [[[1]],[[2],[2,2]],...]
+for (let i = START; i < END + 1; i++) {
+  const arrayA = []
+  for (let j = START; j <= i; j++) {
+    const arrayB = []
+    for (let n = START; n <= j; n++) {
+      arrayB.push(i)
+    }
+    arrayA.push(arrayB)
+  }
+  deepOne.push(arrayA)
+}
+// console.log(deepOne)
 
 // 5. As 4, update array 'deepTwo' so that the result is:
 //       [[[1]],[[1],[1,2]],...]
