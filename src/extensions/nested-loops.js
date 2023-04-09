@@ -63,10 +63,35 @@ for (let i = START; i < END + 1; i++) {
 
 // 5. As 4, update array 'deepTwo' so that the result is:
 //       [[[1]],[[1],[1,2]],...]
-
+for (let i = START; i < END + 1; i++) {
+  const arrayA = []
+  for (let j = START; j <= i; j++) {
+    const arrayB = []
+    for (let n = START; n <= j; n++) {
+      arrayB.push(n)
+    }
+    arrayA.push(arrayB)
+  }
+  deepTwo.push(arrayA)
+}
+// console.log(deepTwo)
 // 6. As 5, update the array 'deepThree', but the result should be the average of the sum of the squares of the numbers in each array
 //       [[1],[[1],[2.5]],...]
-
+for (let i = START; i < END + 1; i++) {
+  const arrayA = []
+  for (let j = START; j <= i; j++) {
+    const arrayB = []
+    let sum = 0
+    for (let n = START; n <= j; n++) {
+      sum = n * n + sum
+    }
+    const num = sum / j
+    arrayB.push(num)
+    arrayA.push(arrayB)
+  }
+  deepThree.push(arrayA)
+}
+// console.log(deepThree)
 module.exports = {
   START,
   END,
