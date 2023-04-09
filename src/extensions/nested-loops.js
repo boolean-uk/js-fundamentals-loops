@@ -17,21 +17,81 @@ const deepThree = []
 // Your code here
 // }
 
+for (let a = START; a <= END; a++) {
+  simpleOne.push(a)
+}
+// console.log(simpleOne)
+
 // 2. Using nested for loops, add arrays to 'nestedOne' where each array has n copies of the outer 'loop index'
 //    eg [[1],[2,2],...]
 
+for (let b = START - 1; b < END; b++) {
+  const innerArray = []
+  for (let c = 0; c <= b; c++) {
+    innerArray.push(b + 1)
+  }
+  nestedOne.push(innerArray)
+}
+
+// console.log(nestedOne)
+
 // 3. As 2, but each array should contain the values from the outer 'loop index' to 1 inclusive. Update array 'nestedTwo'
 //    eg [[1],[2,1],...]
+for (let d = START; d < END + 1; d++) {
+  const array3 = []
+  for (let e = d; e > 0; e--) {
+    array3.push(e)
+  }
+  nestedTwo.push(array3)
+}
 
+// console.log(nestedTwo)
 // 4. As 2, but each array should contain arrays from 1 to the outer 'loop index' with the value of the outer 'loop index'. Update array 'deepOne'
 //    eg [[[1]],[[2],[2,2]],...]
+for (let i = START; i < END + 1; i++) {
+  const arrayA = []
+  for (let j = START; j <= i; j++) {
+    const arrayB = []
+    for (let n = START; n <= j; n++) {
+      arrayB.push(i)
+    }
+    arrayA.push(arrayB)
+  }
+  deepOne.push(arrayA)
+}
+// console.log(deepOne)
 
 // 5. As 4, update array 'deepTwo' so that the result is:
 //       [[[1]],[[1],[1,2]],...]
-
+for (let i = START; i < END + 1; i++) {
+  const arrayA = []
+  for (let j = START; j <= i; j++) {
+    const arrayB = []
+    for (let n = START; n <= j; n++) {
+      arrayB.push(n)
+    }
+    arrayA.push(arrayB)
+  }
+  deepTwo.push(arrayA)
+}
+// console.log(deepTwo)
 // 6. As 5, update the array 'deepThree', but the result should be the average of the sum of the squares of the numbers in each array
 //       [[1],[[1],[2.5]],...]
-
+for (let i = START; i < END + 1; i++) {
+  const arrayA = []
+  for (let j = START; j <= i; j++) {
+    const arrayB = []
+    let sum = 0
+    for (let n = START; n <= j; n++) {
+      sum = n * n + sum
+    }
+    const num = sum / j
+    arrayB.push(num)
+    arrayA.push(arrayB)
+  }
+  deepThree.push(arrayA)
+}
+// console.log(deepThree)
 module.exports = {
   START,
   END,
