@@ -40,55 +40,65 @@ for (let i = START; i <= END; i++) {
 // 4. As 2, but each array should contain arrays from 1 to the outer 'loop index' with the value of the outer 'loop index'. Update array 'deepOne'
 //    eg [[[1]],[[2],[2,2]],...]
 for (let i = START; i <= END; i++) {
-  const innerArray = []
-  for (let j = 1; j <= i; j++) {
-    const subArray = []
-    for (let k = 1; k <= j; k++) {
-      subArray.push(k)
+  const innerArray = [];
+  for (let j = START; j <= i; j++) {
+    const subArray = [];
+    for (let k = START; k <= j; k++) {
+      subArray.push(i);
     }
-    innerArray.push(subArray)
+    innerArray.push(subArray);
   }
-  deepOne.push(innerArray)
+  deepOne.push(innerArray);
 }
+console.log("deep one")
 console.log(deepOne)
+
 
 // 5. As 4, update array 'deepTwo' so that the result is:
 //       [[[1]],[[1],[1,2]],...]
+
 for (let i = START; i <= END; i++) {
-  const innerArray = []
-  for (let j = 1; j <= i; j++) {
-    if (j === 1) {
-      innerArray.push([j])
-    } else {
-      const subArray = []
-      for (let k = 1; k <= j; k++) {
-        subArray.push(k)
-      }
-      innerArray.push(subArray)
+  const innerArray = [];
+  for (let j = START; j <= i; j++) {
+    const subArray = [];
+    for (let k = START; k <= j; k++) {
+      subArray.push(k);
     }
+    innerArray.push(subArray);
   }
-  deepTwo.push(innerArray)
+  deepTwo.push(innerArray);
 }
+console.log("deep two ")
+console.log(deepTwo)
+
 
 // 6. As 5, update the array 'deepThree', but the result should be the average of the sum of the squares of the numbers in each array
 //       [[1],[[1],[2.5]],...]
+const cumulativeSumSquaredArray = simpleOne.map((current, index) => {
+  const subArray = simpleOne.slice(0, index + 1);
+  const sumSquared = subArray.reduce((acc, num) => acc + num ** 2, 0);
+  return sumSquared;
+});
+
+
+console.log(cumulativeSumSquaredArray)
+
 for (let i = START; i <= END; i++) {
-  const innerArray = []
-  for (let j = 1; j <= i; j++) {
-    if (Array.isArray(deepTwo[i - 1][j - 1])) {
-      innerArray.push(deepTwo[i - 1][j - 1])
-    } else {
-      const subArray = []
-      let sum = 0
-      for (let k = 1; k <= j; k++) {
-        subArray.push(k)
-        sum += k * k
-      }
-      innerArray.push(sum / j)
+  const innerArray = [];
+  for (let j = START; j <= i; j++) {
+    const subArray = [];
+    for (let k = START; k <= j; k++) {
+      let avg = 0;
+      avg = cumulativeSumSquaredArray[k-1] / k
+      subArray.push([avg])
     }
+    innerArray.push(subArray);
   }
-  deepThree.push(innerArray)
+  deepThree.push(innerArray[innerArray.length -1]);
 }
+
+console.log("deep three  ")
+console.log(deepThree)
 
 module.exports = {
   START,
