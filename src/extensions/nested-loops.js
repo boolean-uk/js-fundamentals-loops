@@ -70,17 +70,13 @@ for (let i = START; i <= END; i++) {
 
 // 6. As 5, update the array 'deepThree', but the result should be the average of the sum of the squares of the numbers in each array
 //       [[1],[[1],[2.5]],...]
-
 for (let i = START; i <= END; i++) {
   const array = []
-  const nested = []
   let sum = 0
   for (let j = START; j <= i; j++) {
     sum += j * j
-    const avg = []
-    avg.push(sum / j)
-    nested.push(avg.slice(0))
-    array.push(nested.slice(0))
+    const avg = sum / j
+    array.push([avg])
   }
   deepThree.push(array)
 }
