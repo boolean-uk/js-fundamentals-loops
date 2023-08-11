@@ -33,8 +33,8 @@ for (let i = START; i <= END; i++) {
 //    eg [[1],[2,1],...]
 for (let i = START; i <= END; i++) {
   const arr = []
-  for (let j = i; j >= i; j--) {
-    arr.push(i)
+  for (let j = i; j >= 1; j--) {
+    arr.push(j)
   }
   nestedTwo.push(arr)
 }
@@ -42,7 +42,7 @@ for (let i = START; i <= END; i++) {
 //    eg [[[1]],[[2],[2,2]],...]
 for (let i = START; i <= END; i++) {
   const arr = []
-  for (let j = i; j <= i; j++) {
+  for (let j = 1; j <= i; j++) {
     arr.push(Array(j).fill(i))
   }
   deepOne.push(arr)
@@ -51,7 +51,7 @@ for (let i = START; i <= END; i++) {
 //       [[[1]],[[1],[1,2]],...]
 for (let i = START; i <= END; i++) {
   const arr = []
-  for (let j = i; j <= i; j++) {
+  for (let j = 1; j <= i; j++) {
     arr.push(j === 1 ? [i] : Array(j - 1).fill(i))
   }
   deepTwo.push(arr)
@@ -60,7 +60,7 @@ for (let i = START; i <= END; i++) {
 //       [[1],[[1],[2.5]],...]
 for (let i = START; i <= END; i++) {
   const arr = []
-  for (let j = i; j <= i; j++) {
+  for (let j = 1; j <= i; j++) {
     const sum = Array(j)
       .fill(i)
       .reduce((sum, num) => sum + num * num, 0)
