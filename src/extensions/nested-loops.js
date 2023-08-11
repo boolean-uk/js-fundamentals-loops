@@ -80,7 +80,7 @@ for (let i = 1; i < 11; i++) {
       seconInnerArray.push(k)
       sum += k * k
     }
-    innerArray.push(sum / seconInnerArray.length)
+    innerArray.push([sum / seconInnerArray.length])
   }
   deepThree.push(innerArray)
 }
