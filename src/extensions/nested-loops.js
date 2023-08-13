@@ -23,7 +23,7 @@ for (let i = 0; i < END; i++)
 //    eg [[1],[2,2],...]
 for (let i = 0; i < END; i++)
 {
-  let emptyArray = []
+  const emptyArray = []
   for (let j = 0; j <= i; j++)
   {
     emptyArray.push(i + 1)
@@ -32,9 +32,9 @@ for (let i = 0; i < END; i++)
 }
 // 3. As 2, but each array should contain the values from the outer 'loop index' to 1 inclusive. Update array 'nestedTwo'
 //    eg [[1],[2,1],...]
-for (let i = 0; i < END; i++)
+for (let i = 1; i < END; i++)
 {
-  let emptyArray = []
+  const emptyArray = []
   for (let j = i; j >= 1; j--)
   {
     emptyArray.push(j)
@@ -43,34 +43,36 @@ for (let i = 0; i < END; i++)
 }
 // 4. As 2, but each array should contain arrays from 1 to the outer 'loop index' with the value of the outer 'loop index'. Update array 'deepOne'
 //    eg [[[1]],[[2],[2,2]],...]
-
-
-/**
- * these loops are making me dizzy...
- */
-
-for (let i = 1; i < END; i++)
+for (let i = 1; i <= END; i++)
 {
-  let emptyArray = []
-  for (let j = i; j >= 1; j--)
+  const emptyArray = []
+  for (let j = 0; j < i; j++)
   {
-    if (j === 1)
+    const emptyArray2 = []
+    for (let k = 0; k <= j; k++)
     {
-      emptyArray.push([j + 1])
+      emptyArray2.push(i)
     }
-    else
-    {
-      emptyArray.push(Array(j).fill(j))
-    }
+    emptyArray.push(emptyArray2)
   }
   deepOne.push(emptyArray)
 }
-console.log(deepOne)
-
-
 // 5. As 4, update array 'deepTwo' so that the result is:
 //       [[[1]],[[1],[1,2]],...]
-
+for (let i = 1; i <= END; i++)
+{
+  const emptyArray = []
+  for (let j = 1; j <= i; j++)
+  {
+    const emptyArray2 = []
+    for (let k = 1; k <= j; k++)
+    {
+      emptyArray2.push(k)
+    }
+    emptyArray.push(emptyArray2)
+  }
+  deepTwo.push(emptyArray)
+}
 // 6. As 5, update the array 'deepThree', but the result should be the average of the sum of the squares of the numbers in each array
 //       [[1],[[1],[2.5]],...]
 
