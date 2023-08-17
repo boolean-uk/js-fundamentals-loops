@@ -34,8 +34,12 @@ for (let i = START; i <= END; i++) {
 // 4. As 2, but each array should contain arrays from 1 to the outer 'loop index' with the value of the outer 'loop index'. Update array 'deepOne'
 for (let i = START; i <= END; i++) {
   let innerArray = [];
-  for (let j = 1; j <= i; j++) {
-    innerArray.push([i]);
+  for (let j = 0; j < i; j++) {
+    const deeperArray = []
+    for (let k = j; k < i; k++) {
+      deeperArray.push(i)
+    }
+    innerArray.unshift(deeperArray)
   }
   deepOne.push(innerArray);
 }
@@ -45,15 +49,11 @@ for (let i = START; i <= END; i++) {
 for (let i = START; i <= END; i++) {
   let innerArray = [];
   for (let j = 1; j <= i; j++) {
-    if (j === 1) {
-      innerArray.push([i]);
-    } else {
-      let nestedInnerArray = [i];
-      for (let k = 2; k <= j; k++) {
-        nestedInnerArray.push(k);
-      }
-      innerArray.push(nestedInnerArray);
+    const deeperArray = [];
+    for (let k = 1; k <= j; k++) {
+      deeperArray.push(k);
     }
+    innerArray.push(deeperArray);
   }
   deepTwo.push(innerArray);
 }
@@ -61,22 +61,17 @@ for (let i = START; i <= END; i++) {
 // 6. As 5, update the array 'deepThree', but the result should be the average of the sum of the squares of the numbers in each array
 for (let i = START; i <= END; i++) {
   let innerArray = [];
-  let sumOfSquares = 0; // Initialize the sum of squares for each array
+  let sumOfSquares = 0;
   for (let j = 1; j <= i; j++) {
-    if (j === 1) {
-      innerArray.push([i]);
-      sumOfSquares += i * i; // Add the square of the outer loop index to the sum
-    } else {
-      let nestedInnerArray = [i];
-      for (let k = 2; k <= j; k++) {
-        nestedInnerArray.push(k);
-        sumOfSquares += k * k; // Add the square of the current loop index to the sum
-      }
-      innerArray.push(nestedInnerArray);
+    sumOfSquares += j * j;
+    const deeperArray = [];
+    for (let k = 1; k <= j; k++) {
+      deeperArray.push(k);
     }
+    innerArray.push(deeperArray);
   }
-  // Calculate the average of the sum of squares and push the innerArray to deepThree
-  deepThree.push(innerArray.map(arr => arr.map(_ => sumOfSquares / (i * (i + 1) / 2))));
+  const avgSumOfSquares = sumOfSquares / (i * i);
+  deepThree.push(innerArray.map(deeperArray => deeperArray.map(_ => avgSumOfSquares)));
 }
 
 module.exports = {
