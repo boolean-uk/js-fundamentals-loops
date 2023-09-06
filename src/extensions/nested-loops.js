@@ -86,7 +86,7 @@ for (let i = 0; i < simpleOne.length; i++) {
     const jNum = j + 1
     // console.log('    jNum :>> ', jNum)
     const jArray = []
-    for (let k = 0; k < iNum; k++) {
+    for (let k = 0; k < jNum; k++) {
       const kNum = k + 1
       jArray.push(kNum)
     }
@@ -106,25 +106,17 @@ for (let i = 0; i < simpleOne.length; i++) {
   const iArray = []
   for (let j = 0; j < iNum; j++) {
     const jNum = j + 1
-    const jArray = []
+    let jSum = 0
     for (let k = 0; k < jNum; k++) {
-      console.log('    k :>> ', k)
       const kNum = (k + 1) ** 2
-      jArray.push(kNum)
+      jSum += kNum
     }
-    iArray.push(jArray)
+    jSum /= jNum
+    iArray.push([jSum])
   }
-  console.log('iArray :>> ', iArray)
   deepThree.push(iArray)
 }
-console.log('deepThree :>> ', deepThree)
-
-let arraySum = 0
-for (let i = 0; i < arrayEx.length; i++) {
-  const num = arrayEx[i]
-  arraySum += num
-}
-console.log('arraySum :>> ', arraySum)
+// console.log('deepThree :>> ', deepThree)
 
 module.exports = {
   START,
