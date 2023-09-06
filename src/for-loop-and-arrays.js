@@ -7,16 +7,37 @@ let word = '' // eslint-disable-line prefer-const
 
 // 1. Use a for loop to set the sum variable to the sum of all the values in nums
 
+for (let i = 0; i < nums.length; i++) {
+  sum += nums[i];
+}
+console.log(sum)
+
+
 // 2. Use a for loop to populate doubledNums with every value from nums array doubled (i.e [2, 6, 24, etc...])
 const doubledNums = []
 
+for (let i = 0; i < nums.length; i++) {
+  doubledNums.push(nums[i] * 2)
+}
+
+console.log(doubledNums)
+
 // 3. Use a for loop to set word equal to all the letters in the letters array
+
+
+
 
 // 4. Use a for loop to populate everySecondNum with every second number from the nums array
 const everySecondNum = []
 
+
+
+
 // 5. Use a for loop to populate numsReversed with the numbers from nums in reverse order
 const numsReversed = []
+
+
+
 
 // do not change below this line
 module.exports = {
