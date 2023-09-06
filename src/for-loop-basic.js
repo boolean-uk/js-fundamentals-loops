@@ -19,7 +19,9 @@ for (let i=0; i<=6; i+=2) {
 } console.log(evenNums)
 
 // TODO: 4. Write a for loop that adds the numbers 3 to 0 (in that order) to the countdown array
-
+for (i = 3; i >= 0; i--) {
+  countdown.push(i)
+} console.log(countdown)
 // do not change below this line
 module.exports = {
   a: numsZeroToThree,
