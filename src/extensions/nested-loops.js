@@ -24,6 +24,7 @@ console.log('exercise:2')
 
 // 2. Using nested for loops, add arrays to 'nestedOne' where each array has n copies of the outer 'loop index'
 //    eg [[1],[2,2],...]
+
 for (let i = START; i <= END; i++) {
   const array = []
   for (let j = 0; j < i; j++) {
@@ -57,15 +58,15 @@ console.log('exercise:4')
 // console.log(deepOne)
 
 for (let i = START; i <= END; i++) {
-  const red = []
+  const first = []
   for (let j = 1; j <= i; j++) {
-    const blue = []
+    const second = []
     for (let k = 1; k <= j; k++) {
-      blue.push(k)
+      second.push(i)
     }
-    red.push(blue)
+    first.push(second)
   }
-  deepOne.push(red)
+  deepOne.push(first)
 }
 console.log(deepOne)
 console.log('exercise:5')
