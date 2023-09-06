@@ -7,7 +7,7 @@ let word = '' // eslint-disable-line prefer-const
 
 // 1. Use a for loop to set the sum variable to the sum of all the values in nums
 for(let i = 0; i < nums.length; i++){
-    sum += i
+    sum += nums[i]
 }
 console.log("TODO 1 :", sum);
 
