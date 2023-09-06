@@ -13,9 +13,11 @@ const deepThree = []
 
 // HINT: in the below loop, the statements and block of code needs to be changed
 // HINT: in the below loop, the var i represents the loop index
-// for (let i = 5; i < 7; i++) {
-// Your code here
-// }
+for (let i = START; i <= END; i++) {
+  // Your code here
+  simpleOne.push(i)
+}
+console.log(simpleOne)
 
 // 2. Using nested for loops, add arrays to 'nestedOne' where each array has n copies of the outer 'loop index'
 //    eg [[1],[2,2],...]
