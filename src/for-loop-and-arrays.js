@@ -6,34 +6,39 @@ let word = '' // eslint-disable-line prefer-const
 // TODO: Add code below this line to make the tests pass
 
 // 1. Use a for loop to set the sum variable to the sum of all the values in nums
-for (let i=0; i <nums.length; i++) {
-  sum +=nums[i]
-} console.log(sum)
+for (let i = 0; i < nums.length; i++) {
+  sum += nums[i]
+}
+console.log(sum)
 
 // 2. Use a for loop to populate doubledNums with every value from nums array doubled (i.e [2, 6, 24, etc...])
 const doubledNums = []
 
-for (i = 0; i < nums.length; i++) {
-  doubledNums.push(nums[i]*2)
-} console.log(doubledNums)
+for (let i = 0; i < nums.length; i++) {
+  doubledNums.push(nums[i] * 2)
+}
+console.log(doubledNums)
 
 // 3. Use a for loop to set word equal to all the letters in the letters array
-for (let i=0; i< letters.length; i++) {
+for (let i = 0; i < letters.length; i++) {
   word += letters[i]
-} console.log(word)
+}
+console.log(word)
 
 // 4. Use a for loop to populate everySecondNum with every second number from the nums array
 const everySecondNum = []
 
-for (i = 0; i < nums.length; i += 2) {
+for (let i = 1; i < nums.length; i += 2) {
   everySecondNum.push(nums[i])
-} console.log(everySecondNum)
+}
+console.log(everySecondNum)
 
 // 5. Use a for loop to populate numsReversed with the numbers from nums in reverse order
 const numsReversed = []
-for (let i=nums.length-1; i>=0; i--){
+for (let i = nums.length - 1; i >= 0; i--) {
   numsReversed.push(nums[i])
-} console.log(numsReversed)
+}
+console.log(numsReversed)
 
 // do not change below this line
 module.exports = {
