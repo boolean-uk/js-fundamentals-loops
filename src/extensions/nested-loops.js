@@ -26,41 +26,41 @@ console.log('exercise:2')
 //    eg [[1],[2,2],...]
 for (let i = START; i <= END; i++) {
   const array = []
-  for (let j=0 ; j<i ; j++){
-  array.push(i)
-}
-nestedOne.push(array)
+  for (let j = 0; j < i; j++) {
+    array.push(i)
+  }
+  nestedOne.push(array)
 }
 console.log(nestedOne)
 console.log('exercise:3')
 // 3. As 2, but each array should contain the values from the outer 'loop index' to 1 inclusive. Update array 'nestedTwo'
 //    eg [[1],[2,1],...]
-  for(let i = START ; i <= END ; i++){
-    const oneArray = []
-    for(let j=i; j>=1;j--){
-      oneArray.push(j)
-    }
-    nestedTwo.push(oneArray)
+for (let i = START; i <= END; i++) {
+  const oneArray = []
+  for (let j = i; j >= 1; j--) {
+    oneArray.push(j)
   }
+  nestedTwo.push(oneArray)
+}
 console.log(nestedTwo)
 console.log('exercise:4')
 // 4. As 2, but each array should contain arrays from 1 to the outer 'loop index' with the value of the outer 'loop index'. Update array 'deepOne'
 //    eg [[[1]],[[2],[2,2]],...]
-//for(let i=START; i<=END; i++){
-//  
+// for(let i=START; i<=END; i++){
+//
 //  const twoArray = []
 //  for( let j=0;j<=i;j++){
 //    twoArray.push(i)
 //  }
 //  deepOne.push(twoArray)
-//}
-//console.log(deepOne)
+// }
+// console.log(deepOne)
 
-for(let i =START; i <= END ; i ++){
+for (let i = START; i <= END; i++) {
   const red = []
-  for ( let j = 1; j <= i ; j ++){
-    const blue =[]
-    for ( let k = 1 ; k <= j ; k ++){
+  for (let j = 1; j <= i; j++) {
+    const blue = []
+    for (let k = 1; k <= j; k++) {
       blue.push(k)
     }
     red.push(blue)
@@ -73,19 +73,19 @@ console.log('exercise:5')
 // 5. As 4, update array 'deepTwo' so that the result is:
 //       [[[1]],[[1],[1,2]],...]
 
-for(let i =START; i <= END ; i ++){
+for (let i = START; i <= END; i++) {
   const red = []
-  for ( let j = 1; j <= i ; j ++){
-    const blue =[]
-    for ( let k = 1 ; k <= j ; k ++){
+  for (let j = 1; j <= i; j++) {
+    const blue = []
+    for (let k = 1; k <= j; k++) {
       blue.push(k)
     }
     red.push(blue)
   }
   deepTwo.push(red)
 }
- console.log(deepTwo)
- console.log('exercise:6')
+console.log(deepTwo)
+console.log('exercise:6')
 
 // 6. As 5, update the array 'deepThree', but the result should be the average of the sum of the squares of the numbers in each array
 //       [[1],[[1],[2.5]],...]
