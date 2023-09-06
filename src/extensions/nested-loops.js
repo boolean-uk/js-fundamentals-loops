@@ -74,7 +74,6 @@ for (let i = START; i <= END; i++) {
   const array = []
   for (let j = 1; j <= i; j++) {
     console.log('   J', j)
-    // const jNum = j + 1
     let innerArray = 0
     for (let k = 0; k < j; k++) {
       console.log('     K', k)
@@ -84,6 +83,7 @@ for (let i = START; i <= END; i++) {
       innerArray += kNumSquared
       console.log('            Inner Array', innerArray)
     }
+    innerArray = [innerArray / j]
     array.push(innerArray)
   }
   deepThree.push(array)
