@@ -27,14 +27,17 @@ console.log(simpleOne)
 //    eg [[1],[2,2], [3,3,3], [4,4,4,4]...]
 
 for (let i = 1; i <= 10; i++) {
-  // console.log(i)
-  nestedOne.push([i])
-  for (let j = 1; j < i; j++) {
-    // console.log(i)
-    nestedOne.push(j)
+
+  // create a temporary array we then can push
+  let tempArray = []
+  for (let j = 1; j <= i; j++) {
+    tempArray.push(i)
   }
+  // push this tempArray to nestedOne
+  nestedOne.push(tempArray)
+  console.log(`current state of nestedOne in iteration ${i}:`, nestedOne)
 }
-console.log(nestedOne)
+console.log(`final state`, nestedOne)
 
 // 3. As 2, but each array should contain the values from the outer 'loop index' to 1 inclusive. Update array 'nestedTwo'
 //    eg [[1],[2,1],...]
