@@ -9,6 +9,9 @@ for (i=0 ; i<4 ;  i=i+1)
 console.log(numsZeroToThree)
 
 // TODO: 2. Write a for loop that adds the numbers 5 to 10 to the numsFiveToTen array
+for (i = 5; i <= 10; i++) {
+  numsFiveToTen.push(i)
+} console.log(numsFiveToTen)
 
 // TODO: 3. Write a for loop that adds all the even numbers between 0 and 6 (0, 2, 4, 6) to evenNums
 
