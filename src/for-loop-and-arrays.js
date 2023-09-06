@@ -35,7 +35,7 @@ console.log(everySecondNum);
 
 // 5. Use a for loop to populate numsReversed with the numbers from nums in reverse order
 const numsReversed = []
-for (let i = nums.length - 1; i > 0; i--) {
+for (let i = nums.length - 1; i >= 0; i--) {
   numsReversed.push(nums[i]);
 }
 console.log(numsReversed);
