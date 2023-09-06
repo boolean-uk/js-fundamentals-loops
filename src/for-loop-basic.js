@@ -14,6 +14,9 @@ for (i = 5; i <= 10; i++) {
 } console.log(numsFiveToTen)
 
 // TODO: 3. Write a for loop that adds all the even numbers between 0 and 6 (0, 2, 4, 6) to evenNums
+for (let i=0; i<=6; i+=2) {
+  evenNums.push(i);
+} console.log(evenNums)
 
 // TODO: 4. Write a for loop that adds the numbers 3 to 0 (in that order) to the countdown array
 
