@@ -13,6 +13,10 @@ for (let i=0; i <nums.length; i++) {
 // 2. Use a for loop to populate doubledNums with every value from nums array doubled (i.e [2, 6, 24, etc...])
 const doubledNums = []
 
+for (i = 0; i < nums.length; i++) {
+  doubledNums.push(nums[i]*2)
+} console.log(doubledNums)
+
 // 3. Use a for loop to set word equal to all the letters in the letters array
 
 // 4. Use a for loop to populate everySecondNum with every second number from the nums array
