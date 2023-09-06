@@ -31,6 +31,9 @@ for (i = 0; i < nums.length; i += 2) {
 
 // 5. Use a for loop to populate numsReversed with the numbers from nums in reverse order
 const numsReversed = []
+for (let i=nums.length-1; i>=0; i--){
+  numsReversed.push(nums[i])
+} console.log(numsReversed)
 
 // do not change below this line
 module.exports = {
