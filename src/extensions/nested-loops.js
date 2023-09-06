@@ -23,11 +23,13 @@ for (let i = 0; i < 10; i++) {
 
 // 2. Using nested for loops, add arrays to 'nestedOne' where each array has n copies of the outer 'loop index'
 //    eg [[1],[2,2],...]
-for (let i = 0; i < 10; i++) {
-  for (let v = 0; v < 10; v++) {
-    nestedOne[i][v] = i
+for (let i = 1; i < 11; i++) {
+  nestedOne.push([])
+  for (let j = 0; j < nestedOne.length; j++) {
+    nestedOne[nestedOne.length - 1].push(i)
   }
 }
+console.log(nestedOne)
 // 3. As 2, but each array should contain the values from the outer 'loop index' to 1 inclusive. Update array 'nestedTwo'
 //    eg [[1],[2,1],...]
 
