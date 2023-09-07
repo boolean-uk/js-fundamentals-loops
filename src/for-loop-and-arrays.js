@@ -17,7 +17,7 @@ for (i = 0; i < nums.length; i++) {
 }
 
 // 3. Use a for loop to set word equal to all the letters in the letters array
-for (i = o; i < letters.length; i++) {
+for (i = 0; i < letters.length; i++) {
   word += letters[i]
 }
 
