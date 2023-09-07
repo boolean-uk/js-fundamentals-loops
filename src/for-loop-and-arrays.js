@@ -31,6 +31,9 @@ const everySecondNum = []
 for(let i = 1; i < nums.length; i += 2){
   everySecondNum.push(nums[i])
 }
+
+// i += 2 skips to every second value... i.e the current index of i + 2 
+// for this example the first index of i 3, so i+2 skips to the 3rd value which is 5
 console.log(everySecondNum);
 
 // 5. Use a for loop to populate numsReversed with the numbers from nums in reverse order
