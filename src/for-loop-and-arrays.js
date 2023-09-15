@@ -7,9 +7,15 @@ let word = '' // eslint-disable-line prefer-const
 
 // 1. Use a for loop to set the sum variable to the sum of all the values in nums
 
-for (let i = 0; i < nums.length; i++) {
-  sum += nums[i]
-}
+// for (let i = 0; i < nums.length; i++) {
+//   sum += nums[i]
+// }
+// console.log(sum)
+
+nums.forEach(function (currentNumber, index) {
+  sum = sum + currentNumber
+})
+
 console.log(sum)
 
 // 2. Use a for loop to populate doubledNums with every value from nums array doubled (i.e [2, 6, 24, etc...])
