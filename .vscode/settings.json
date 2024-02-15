@@ -1,0 +1,4 @@
+{
+    "jasmineExplorer.config": "spec/support/all-jasmine.json"
+   
+}
