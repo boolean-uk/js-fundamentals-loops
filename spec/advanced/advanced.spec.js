@@ -35,8 +35,9 @@ describe('advanced', () => {
     expect(smallest).toBe(-9)
   })
 
+  // Should be 3.5 according to math :)
   // 6. find the median of the numbers in the array
   it('Check median', () => {
-    expect(median).toBe(3)
+    expect(median).toBe(3.5)
   })
 })
