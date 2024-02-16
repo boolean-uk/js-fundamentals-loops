@@ -44,7 +44,7 @@ for (let i = 1; i <= 10; i++) {
 for (let i = 1; i <= 10; i++) {
   const array = []
   for (let j = 1; j <= i; j++) {
-    let innerArray = []
+    const innerArray = []
     for (let k = 1; k <= j; k++) {
       innerArray.push(i)
     }
@@ -58,7 +58,7 @@ for (let i = 1; i <= 10; i++) {
 for (let i = 1; i <= 10; i++) {
   const array = []
   for (let j = 1; j <= i; j++) {
-    let innerArray = []
+    const innerArray = []
     for (let k = 1; k <= j; k++) {
       innerArray.push(k)
     }
