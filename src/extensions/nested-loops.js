@@ -69,19 +69,15 @@ for (let i = 1; i < 11; i++) {
 for (let i = 1; i < 11; i++) {
   const arr = []
   for (let j = 1; j <= i; j++) {
-    arr.push(Array.from({ length: j }, (_, i) => i + 1)) // .reduce((a, b) => a + b))
+    arr.push(Array.from({ length: j }, (_, i) => i + 1))
   }
 
   for (let i = 0; i < arr.length; i++) {
-    // console.log('breikki', i + 1)
-    const val = arr[i].reduce((a, b) => Math.sqrt(a) + Math.sqrt(b)) / (i + 1)
-    arr[i] = [val]
+    const val = arr[i].map((a) => Math.pow(a, 2)).reduce((a, b) => a + b)
+    arr[i] = [val / (i + 1)]
   }
-  // console.log(arr)
   deepThree.push(arr)
 }
-
-console.log(deepThree)
 
 module.exports = {
   START,
