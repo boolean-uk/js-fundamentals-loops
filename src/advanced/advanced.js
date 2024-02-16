@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 const nums = [1, 10, 3, 9, 4, 8, 5, 7, 6, 2, -5, -2, -4, -9] // eslint-disable-line no-unused-vars
 
 // 1. Use a for loop to set the variable hasTen to true if the array contains the value 10
