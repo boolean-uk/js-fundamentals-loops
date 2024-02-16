@@ -46,7 +46,23 @@ for (let i = 0; i < nums.length; i++) {
 }
 
 // 6. find the median of the numbers in the array
-const median = 0
+let median = 0
+
+for (let i = 1; i < nums.length; i++) {
+  for (let j = 0; j < i; j++) {
+    if (nums[i] < nums[j]) {
+      const x = nums[i]
+      nums[i] = nums[j]
+      nums[j] = x
+    }
+  }
+}
+
+const l = nums.length // 14
+median =
+  nums.length % 2 !== 0
+    ? nums[Math.ceil(l / 2)]
+    : (nums[l / 2] + nums[l / 2 - 1]) / 2
 
 module.exports = {
   hasTen,
