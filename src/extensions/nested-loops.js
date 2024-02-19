@@ -75,7 +75,7 @@ for (let i = START; i <= END; i++) {
       inner.push(k)
     }
     const sum = inner.reduce((acc, val) => acc + val * val)
-    temp.push(sum / inner.length)
+    temp.push([sum / inner.length])
   }
   deepThree.push(temp)
 }
