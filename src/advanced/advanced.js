@@ -21,7 +21,7 @@ nums.forEach(num => divisibleByThreeCount += num % 3 == 0 ? 1 : 0);
 // 3. use a for loop to find the average of the numbers in the array
 let average = 0
 nums.forEach(num => average += num);
-average = average / nums.length;
+average /= nums.length;
 
 // 4. use a for loop to find the largest number in the array
 let largest = 0
@@ -34,7 +34,12 @@ nums.forEach(num => smallest = num < smallest ? num : smallest);
 // 6. find the median of the numbers in the array
 let median = 0
 let values = [...nums].sort((a, b) => a - b);
-median = values.at(values.length / 2 - 1);
+let index = Math.floor(values.length / 2);
+median = values.length % 2 == 1 ? values.at(index) : 
+  Math.floor((values.at(index - 1) + values.at(index) ) / 2);
+
+// You are not supposed to floor a median, but it has been done
+
 
 module.exports = {
   hasTen,
