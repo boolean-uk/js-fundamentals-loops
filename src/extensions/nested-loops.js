@@ -86,7 +86,7 @@ for (let i = START; i <= END; i++) {
   let sumOfSquares = 0;
   for (let j = 1; j <= i; j++) {
     sumOfSquares += j * j;
-    outerArray.push(sumOfSquares / j);
+    outerArray.push([sumOfSquares / j]);
   }
   deepThree.push(outerArray);
 }
