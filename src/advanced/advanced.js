@@ -45,7 +45,15 @@ for (let i = 0; i < nums.length; i++) {
 
 // 6. find the median of the numbers in the array
 let median = 0
-median = nums.sort().at(nums.length / 2)
+const sortedNums = nums.sort((a, b) => a - b)
+// Odd number length
+if (nums.length % 2 === 1) {
+  median = sortedNums.at(Math.floor(nums.length / 2))
+} else {
+  const middleLow = sortedNums.at(nums.length / 2 - 1)
+  const middleHigh = sortedNums.at(nums.length / 2)
+  median = (middleLow + middleHigh) / 2
+}
 
 module.exports = {
   hasTen,
