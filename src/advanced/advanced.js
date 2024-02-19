@@ -58,17 +58,19 @@ for (let i = 0; i <= nums.length; i++)
 
 // 6. find the median of the numbers in the array
 let median = 10000;
+median = nums.sort()[nums.length/2]
 nums.sort((a, b) => a - b); // Sort the array in ascending order
-const mid = Math.floor(nums.length / 2);
+//median = [nums.length/2]
+// const mid = Math.floor(nums.length / 2);
 
-// Calculate the median based on length
-if (nums.length % 2 === 0) {
-  // Even length: average of two middle elements
-  median =  (nums[mid - 1] + nums[mid]) / 2;
-} else {
-  // Odd length: middle element
-  median =  nums[mid];
-}
+// // Calculate the median based on length
+// if (nums.length % 2 === 0) {
+//   // Even length: average of two middle elements
+//   median =  (nums[mid - 1] + nums[mid]) / 2;
+// } else {
+//   // Odd length: middle element
+//   median =  nums[mid];
+// }
 console.log(nums)
 console.log(median)
 
