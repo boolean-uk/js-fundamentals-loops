@@ -3,23 +3,74 @@ const nums = [1, 10, 3, 9, 4, 8, 5, 7, 6, 2, -5, -2, -4, -9] // eslint-disable-l
 // 1. Use a for loop to set the variable hasTen to true if the array contains the value 10
 // note: use a break statement to exit the loop early if the value is found
 // to prove you have done this, set the variable indexOfTen to the iteration index when you find 10
-let hasTen = false
-let indexOfTen = -1
+let hasTen = false;
+let indexOfTen = -1;
+
+for (let i = 0; i < nums.length; i++) {
+    if (nums[i] == 10) {
+        hasTen = true;
+        indexOfTen = i;
+        break;
+    }
+}
 
 // 2. Use a for loop to count how many numbers in the array are divisible by 3
 let divisibleByThreeCount = 0
+nums.forEach(num => {
+  if (!(num % 3)) 
+    divisibleByThreeCount++
+});
 
 // 3. use a for loop to find the average of the numbers in the array
 let average = 0
+nums.forEach(num => {
+  average += num
+});
+average /= nums.length
 
 // 4. use a for loop to find the largest number in the array
 let largest = 0
+nums.forEach(num => {
+  if(num>largest)
+    largest = num
+});
 
 // 5. use a for loop to find the smallest number in the array
 let smallest = 100000
+nums.forEach(num => {
+  if(num<smallest)
+    smallest = num
+});
 
 // 6. find the median of the numbers in the array
 let median = 0
+const newArray = bubbleSort(nums)
+console.log(newArray)
+if((newArray % 2)){
+  median = newArray[(newArray.length / 2) - 0.5]
+}
+else{
+  median = newArray[(newArray.length / 2) - 1]
+}
+
+function bubbleSort(array){
+  let newArray = array.slice();
+  wasUpdatedLastLoop = true
+
+  while(wasUpdatedLastLoop){
+    wasUpdatedLastLoop = false
+
+    for(let i = 0; i < newArray.length-1; i++){
+      if(newArray[i] > newArray[i+1]){
+        wasUpdatedLastLoop = true;
+
+        [newArray[i], newArray[i + 1]] = [newArray[i + 1], newArray[i]];
+      }
+    }
+  }
+
+  return newArray
+}
 
 module.exports = {
   hasTen,
