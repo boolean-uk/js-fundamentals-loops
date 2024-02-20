@@ -16,10 +16,27 @@ const deepThree = []
 // for (let i = 5; i < 7; i++) {
 // Your code here
 // }
+for (let i = START; i <= END; i++) {
+  simpleOne.push(i)
+}
 
 // 2. Using nested for loops, add arrays to 'nestedOne' where each array has n copies of the outer 'loop index'
 //    eg [[1],[2,2],...]
 
+for (let i = START; i <= END; i++) {
+  const newArr = []
+  for (let i = START; i <= END; i++) {
+    newArr.push(i)
+  }
+  nestedOne.push(newArr)
+}
+
+// for (let i = 0; i < simpleOne.length; i++) {
+//   for (let j = 0; j <= i; j++) {
+//     nestedOne.push([simpleOne[i]])
+//   }
+// }
+console.log(nestedOne)
 // 3. As 2, but each array should contain the values from the outer 'loop index' to 1 inclusive. Update array 'nestedTwo'
 //    eg [[1],[2,1],...]
 
