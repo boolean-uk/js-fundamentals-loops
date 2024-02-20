@@ -55,6 +55,16 @@ for (let i = 1; i < nums.length; i++) {
 // 6. find the median of the numbers in the array
 let median = 0
 
+nums.sort((a, b) => a - b); // Sorts the array in ascending order
+let midIndex = Math.floor(nums.length / 2);
+// Since the array has an even number of elements, the median is calculated by averaging the two middle numbers
+if (nums.length % 2 === 0) {
+    median = (nums[midIndex - 1] + nums[midIndex]) / 2;
+} else {
+    median = nums[midIndex];
+}
+
+
 module.exports = {
   hasTen,
   indexOfTen,
