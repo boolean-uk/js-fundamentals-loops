@@ -14,12 +14,13 @@
 ## Instructions
 
 - Read through the numbered comments in the following files to understand the requirements of this exercise.
+
   - `src/for-loop-basic.js`
   - `src/for-loop-and-arrays.js`
 
 - Write your code directly below the numbered comment.
 
-- Add `console.log()`s to get visibility on your solution and run the file with the command `node src/<file>.js` *etc*
+- Add `console.log()`s to get visibility on your solution and run the file with the command `node src/<file>.js` _etc_
 
 - See `src/example.js` for some examples
 
@@ -27,7 +28,7 @@
 
 - To verify your solutions, run the test suite by running the `npx jasmine` command followed by the path to the corresponding test file for each `src/*.js` file above, eg:
 
-    `npx jasmine spec/for-loop-basic.spec.js`
+  `npx jasmine spec/for-loop-basic.spec.js`
 
 - Alternatively, run:
 
