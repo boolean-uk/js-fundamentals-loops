@@ -25,8 +25,8 @@ for (let i = START; i <= END; i++) {
 //    eg [[1],[2,2],...]
 
 for (let i = 1; i <= 10; i++) {
-  let loopIndex = []
-  for (j = 0; j < i; j++) {
+  const loopIndex = []
+  for (let j = 0; j < i; j++) {
     loopIndex.push(i)
   }
   nestedOne.push(loopIndex)
@@ -36,6 +36,14 @@ for (let i = 1; i <= 10; i++) {
 // 3. As 2, but each array should contain the values from the outer 'loop index' to 1 inclusive. Update array 'nestedTwo'
 //    eg [[1],[2,1],...]
 
+for (let i = 1; i <= 10; i++) {
+  const loopIndex = []
+  for (let j = 1; j <= i; j++) {
+    loopIndex.push(j)
+  }
+  nestedTwo.push(loopIndex.reverse())
+}
+console.log(nestedTwo)
 
 // 4. As 2, but each array should contain arrays from 1 to the outer 'loop index' with the value of the outer 'loop index'. Update array 'deepOne'
 //    eg [[[1]],[[2],[2,2]],...]
