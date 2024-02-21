@@ -40,8 +40,8 @@ for (var i = 0; i < nums.length; i++)
 // 6. find the median of the numbers in the array
 let median = 0
 
-// you didn't say, 'use a for loop'
-nums.sort(function (a, b) { return a > b })
+// didn't tell me that i had to use a for-loop
+nums.sort()
 const _middleVal = Math.floor(nums.length / 2)
 const _isEven = nums.length % 2 === 0
 

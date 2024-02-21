@@ -5,27 +5,23 @@ const countdown = []
 
 // TODO: 1. Write a for loop that adds the numbers 0 to 3 to the numsZeroToThree array
 
-for (var i = 0; i <= 3; i++) {
+for (var i = 0; i <= 3; i++)
   numsZeroToThree.push(i)
-}
 
 // TODO: 2. Write a for loop that adds the numbers 5 to 10 to the numsFiveToTen array
 
-for (var i = 5; i <= 10; i++) {
+for (var i = 5; i <= 10; i++)
   numsFiveToTen.push(i)
-}
 
 // TODO: 3. Write a for loop that adds all the even numbers between 0 and 6 (0, 2, 4, 6) to evenNums
 
-for (var i = 0; i < 10; i+=2) {
+for (var i = 0; i <= 6; i+=2)
   evenNums.push(i)
-}
 
 // TODO: 4. Write a for loop that adds the numbers 3 to 0 (in that order) to the countdown array
 
-for (var i = 3; i => 0; i--) {
-  numsZeroToThree.push(i)
-}
+for (var i = 3; i >= 0; i--)
+  countdown.push(i)
 
 // do not change below this line
 module.exports = {
