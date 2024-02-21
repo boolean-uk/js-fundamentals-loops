@@ -51,7 +51,7 @@ if(nums.length % 2 === 1){
   median = nums[Math.floor(nums.length / 2)]
 }
 else{
-  median = Math.floor((nums[nums.length/2] + nums[nums.length/2 -1])/2) 
+  median = (nums[nums.length/2] + nums[nums.length/2 -1])/2 
 }
 
 module.exports = {
