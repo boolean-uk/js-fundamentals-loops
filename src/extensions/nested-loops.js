@@ -10,6 +10,9 @@ const deepThree = []
 
 // 1. Using a for loop from 1 to 10, add the value of the 'loop index' to the array 'simpleOne'
 //    eg [1,2,3...]
+for (let i = START; i <= END; i++) {
+  simpleOne.push(i)
+}
 
 // HINT: in the below loop, the statements and block of code needs to be changed
 // HINT: in the below loop, the var i represents the loop index
@@ -19,18 +22,60 @@ const deepThree = []
 
 // 2. Using nested for loops, add arrays to 'nestedOne' where each array has n copies of the outer 'loop index'
 //    eg [[1],[2,2],...]
+for (let i = START; i <= END; i++) {
+  nestedOne.push([])
+  for (let x = 0; x < i; x++) {
+    nestedOne[i - 1].push(i)
+  }
+}
 
 // 3. As 2, but each array should contain the values from the outer 'loop index' to 1 inclusive. Update array 'nestedTwo'
 //    eg [[1],[2,1],...]
+for (let i = START; i <= END; i++) {
+  nestedTwo.push([])
+  for (let x = i; x > 0; x--) {
+    nestedTwo[i - 1].push(x)
+  }
+}
 
 // 4. As 2, but each array should contain arrays from 1 to the outer 'loop index' with the value of the outer 'loop index'. Update array 'deepOne'
 //    eg [[[1]],[[2],[2,2]],...]
+for (let i = START; i <= END; i++) {
+  deepOne.push([])
+  for (let x = 0; x < i; x++) {
+    deepOne[i - 1].push([])
+    for (let y = 0; y < x + 1; y++) {
+      deepOne[i - 1][x].push(i)
+    }
+  }
+}
 
 // 5. As 4, update array 'deepTwo' so that the result is:
 //       [[[1]],[[1],[1,2]],...]
+for (let i = START; i <= END; i++) {
+  deepTwo.push([])
+  for (let x = 0; x < i; x++) {
+    deepTwo[i - 1].push([])
+    for (let y = 0; y < x + 1; y++) {
+      deepTwo[i - 1][x].push(y + 1)
+    }
+  }
+}
 
 // 6. As 5, update the array 'deepThree', but the result should be the average of the sum of the squares of the numbers in each array
 //       [[1],[[1],[2.5]],...]
+for (let i = START; i <= END; i++) {
+  deepThree.push([])
+  for (let x = 1; x <= i; x++) {
+    deepThree[i - 1].push([])
+    let num = 0
+    for (let y = 1; y <= x; y++) {
+      num += y * y
+    }
+    deepThree[i - 1][x - 1].push([])
+    deepThree[i - 1][x - 1][0] = num / x
+  }
+}
 
 module.exports = {
   START,
