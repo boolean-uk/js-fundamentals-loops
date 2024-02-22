@@ -22,7 +22,7 @@ for (let i = 1; i <= 10; i++) {
 // 2. Using nested for loops, add arrays to 'nestedOne' where each array has n copies of the outer 'loop index'
 //    eg [[1],[2,2],...]
 for (let i = 1; i <= 10; i++) {
-  let tempArray = []
+  const tempArray = []
   for (let j = 1; j <= i; j++) {
     tempArray.push(i)
   }
@@ -32,7 +32,7 @@ for (let i = 1; i <= 10; i++) {
 // 3. As 2, but each array should contain the values from the outer 'loop index' to 1 inclusive. Update array 'nestedTwo'
 //    eg [[1],[2,1],...]
 for (let i = 1; i <= 10; i++) {
-  let tempArray = []
+  const tempArray = []
   for (let j = i; j >= 1; j--) {
     tempArray.push(j)
   }
@@ -42,9 +42,9 @@ for (let i = 1; i <= 10; i++) {
 // 4. As 2, but each array should contain arrays from 1 to the outer 'loop index' with the value of the outer 'loop index'. Update array 'deepOne'
 //    eg [[[1]],[[2],[2,2]],...]
 for (let i = 1; i <= 10; i++) {
-  let midArray = []
+  const midArray = []
   for (let j = 0; j < i; j++) {
-    let innerArray = []
+    const innerArray = []
     for (let k = 0; k < j + 1; k++) {
       innerArray.push(i)
     }
