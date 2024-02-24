@@ -20,20 +20,20 @@ for(let i = 0; i < nums.length; i++){
 // 3. Use a for loop to set word variable equal to all the letters in the letters array combined as a single string
 
 for(let i = 0; i < letters.length; i++){
-  word += nums[i];
+  word += letters[i]; 
 }
 
 // 4. Use a for loop to populate everySecondNum with every second number from the nums array
 const everySecondNum = []
-for(let i = 0; i < nums.length; i+2){
-  everySecondNum[i] = nums[i];
+for(let i = 0; i < nums.length; i += 2){
+  everySecondNum.push(nums[i]); 
 }
 
 
 // 5. Use a for loop to populate numsReversed with the numbers from nums in reverse order
 const numsReversed = []
-for(let i = nums.length-1; i >= 0; i--){
-  numsReversed[i] = nums[i];
+for(let i = nums.length - 1; i >= 0; i--){
+  numsReversed.push(nums[i]); 
 }
 
 
