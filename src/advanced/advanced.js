@@ -38,7 +38,6 @@ for (let i = 0; i < nums.length; i++) {
   }
 }
 
-
 // 5. use a for loop to find the smallest number in the array
 let smallest = 100000
 
