@@ -7,9 +7,6 @@ Loops are used to run code multiple times. In JavaScript, there are many differe
 Here's an example of a loop that will print the numbers 0 to 4:
 
 ```javascript
-for (let i=0; i<5; i++) {
-  console.log(i)
-}
 >>> 0
 >>> 1
 >>> 2
